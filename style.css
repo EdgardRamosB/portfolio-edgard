@@ -1,0 +1,1010 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after{
+margin: 0%;
+padding: 0;
+box-sizing: inherit;
+
+}
+ 
+/*menu desplegable */
+body{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+   
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+   background-color: rgba(255, 255, 255, 0.2);
+   padding: 0 10%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+
+}
+
+.logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffff;
+    font-weight: 700;
+
+}
+
+.navigation ul {
+    list-style: none;
+
+}
+
+.header .navigation ul li{
+    float: left;
+    position: relative;
+}
+
+.header .navigation ul li a{
+   font-size: 18px;
+   color: #ffff;
+   text-decoration: none;
+   padding: 20px;
+   display: block; 
+   transition: all .2s ease;
+
+}
+
+.header .navigation ul li a:hover {
+    background-color: #580619;
+
+ 
+}
+
+.header .navigation ul li ul{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: rgb(255, 255, 255, 0.20);
+    display: none;
+}
+
+.header .navigation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navigation ul li ul li{
+    width: 100%;
+}
+
+.header .navigation ul li:hover > ul {
+    display: initial;
+}
+
+
+.header .navigation ul li ul li span{
+    float: right;
+    color: #ffff;
+}
+
+#toggle
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.imagen3rayas{
+
+    width: 45px;
+    height: 35px;
+} 
+
+
+
+body{
+    background-color: #e2e7e5fa; 
+}
+
+/* Para encabezados y menú */
+.header,
+.navigation a,
+.logo {
+    color: #f0f0f0; /* Color de texto claro */
+}
+
+/* Para enlaces de navegación */
+a {
+    color: #00aaff; /* Color azul vibrante para enlaces */
+}
+
+a:hover {
+    color: #0073e6; /* Un color de enlace más oscuro al hacer hover */
+}
+
+/* Para elementos de la lista en aficiones */
+.aficiones__lista li a {
+    color: #f5f5f5; /* Texto gris claro */
+}
+
+.aficiones__lista li {
+    background-color: #303030; /* Fondo gris oscuro */
+}
+
+
+/* PRESENTACION*/
+@keyframes levitate {
+    0% {
+        transform: translateY(0); /* posición original */
+    }
+    50% {
+        transform: translateY(-10px); /* se eleva */
+    }
+    100% {
+        transform: translateY(0); /* vuelve a la posición original */
+    }
+}
+
+/*FOTO HOMBRE LEVITANDO*/
+.presentacion__foto {
+    position: absolute; /* La imagen se posicionará de manera absoluta en relación a .hero */
+    top: 30%; /* Ajusta para centrar verticalmente */
+    left: 5%; /* Ajusta para centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Esto centra la imagen completamente */
+    z-index: 10; /* Asegura que la imagen esté por encima del fondo */
+    width: 15rem; /* Tamaño de la imagen, ajusta según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular, si lo deseas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra para darle más profundidad */
+    animation: levitate 1s ease-in-out infinite; /* aplica la animación */
+}
+
+.presentacion__foto:hover {
+    filter: brightness(1.3); /* Aumenta el brillo al pasar el mouse */
+}
+
+
+.presentacion {
+    display: flex; /*no es necesario solo contiene textospermite centrar los elementos   dentro del contenedor de manera sencilla.*/
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Alinea el texto dentro de los elementos hijos */
+    min-height: 30vh;  /*Asegura que ocupe toda la pantalla */
+    /*padding-left: 80px;  Añade algo de padding para evitar que el contenido toque los bordes */
+    padding-right: 80px;
+    /* background-color: #18ca95;  */
+    margin: 0px 30px 0px 30px; 
+}
+
+.presentacion__fotoed {
+    width: 16rem; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+    border-radius: 50%; /* Opcional: hace la imagen circular */
+    margin-right: 2rem; /* Añade espacio entre la imagen y el texto */
+    /* Puedes añadir más estilos si quieres un efecto visual */
+}
+
+.presentacion__contenedor {
+    max-width: 27.5rem; /* Ancho máximo determinado */
+    width: 100%; /* Asegura que el contenedor use todo el espacio disponible hasta el ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+  
+    /* background-color: rgb(229, 230, 187); */
+    border-radius: 20px; 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+
+}
+.presentacion__titulo {
+    font-size: 1.5rem;
+    /* background-color: #333; */
+    color: black;
+    margin-bottom: 0.5rem;
+}
+.presentacion__subtitulo {
+   font-size: 1rem;
+   color: #666;
+   margin-bottom: 1rem;
+   text-align: justify;
+   padding: 0.3rem;
+}
+.redes {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%); 
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
+    justify-content: center;
+    gap: 1rem; /* Espacio entre los elementos */
+    z-index: 2; /*para colocarlo arriba del contenedr proximo*/
+    width: 41.25rem;
+    padding: 10px 20px; /* Aumenta el padding para hacer los botones más anchos */
+}
+.redes__img a {
+    display: inline-block; /* Asegura que el enlace sea tratado como un bloque en línea */
+    flex-wrap: wrap;
+    font-size: 1rem;
+    background-color: #050505; 
+    color: #f6f8f6;
+    padding: 0.625rem; /* Espacio alrededor del contenido del enlace */
+    border: 2px solid #fafafa; /* Cambia el color y grosor del borde */
+    border-radius: 0.6125rem; /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: border-color 0.3s ease; /* Transición suave para cambios de color de borde */
+}
+.redes__img img {
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    width: 1.875rem;
+    height: auto;  
+}
+
+.redes__img a:hover {
+    border-color: #25b651; /* Cambia el color del borde al pasar el mouse */
+}
+
+
+
+/* SOBRE MI */
+.sobre__mi {
+    display: flex;
+    flex-direction: column;
+    max-width: 37.5rem; /* Ancho máximo determinado */
+    width: 100%; /* Asegura que el contenedor use todo el espacio disponible hasta el ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+
+    /* border: 2px solid #25b651; */
+    /* border-radius: 12px; */
+    padding: 5px;
+    border-radius: 20px; 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
+}
+.sobre__mi__titulo {
+    text-align: center;
+    font-size: 1.5rem;
+    /* background-color: #333; */
+    color: black;
+    margin-bottom: 0.5rem;/
+}
+.sobre__mi__titulo__texto {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: justify;
+    padding: 0.8rem;
+}
+
+.sobre__mi__firma {
+    width: 100px;
+    height: 50px; /* Tamaño del contenedor */
+    object-fit: contain; /* Mantiene la relación de aspecto dentro del contenedor */
+}
+
+/* HABILIDADES */
+.habilidades {
+    text-align: center; /* Alinea el contenido del contenedor */
+    padding: 1rem ; /* Añade espacio alrededor de la sección */
+}
+.habilidades__titulo {
+    font-size: 2rem;
+    margin-bottom: 1.5rem; /* Añade espacio debajo del título */
+    color: #333; /* Ajusta el color si es necesario */
+}
+.habilidades__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centra la lista */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea una cuadrícula de 3 columnas */
+    gap: 2rem; /* Añade espacio entre los elementos */
+    max-width: 800px; /* Define un ancho máximo para centrar el contenido */
+}
+
+.habilidades__lista li {
+    display: flex;
+    align-items: center; /* Alinea el texto y la imagen verticalmente */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    box-shadow: 0 14px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de elevación */
+    background-color: #050505;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.habilidades__lista li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white;/* Ajusta el color del texto */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    border-radius: 12px;
+    /* background-color: #8a2be2; */
+    gap: 1rem; /* Espacio entre el texto y la imagen */
+}
+
+.habilidades__lista li img {
+    width: 50px; /* Tamaño de los iconos */
+    height: auto;
+    margin-top: 0.5rem; /* Espacio entre el texto y el icono */
+}
+
+/* Definir la animación de rotación */
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg); /* Inicia en 0 grados */
+    }
+    100% {
+        transform: rotate(360deg); /* Gira a 360 grados */
+    }
+}
+
+/* Estilos de la lista y sus elementos */
+.habilidades__lista li img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: auto;  
+    transition: transform 0.6s ease-in-out; /* Transición para la animación */
+}
+
+/* Animación al pasar el mouse */
+.habilidades__lista li img:hover {
+    animation: rotate360 0.6s ease-in-out; /* Aplica la animación de 360 grados */
+}
+
+/*imagen de fondo*/
+.hero {
+    position: relative; /* Esto permite que los elementos dentro de .hero se posicionen en relación a este contenedor */
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(14, 5, 5, 0.2)), url(./imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*AFICIONES*/
+.aficiones {
+    text-align: center; /* Alinea el contenido del contenedor */
+    padding: 1rem ; /* Añade espacio alrededor de la sección */
+}
+
+.p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: justify;
+    padding: 0.3rem;
+}
+
+.aficiones__titulo {
+    font-size: 2rem;
+    margin-bottom: 1.5rem; /* Añade espacio debajo del título */
+    color: #333; /* Ajusta el color si es necesario */
+}
+
+.aficiones__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centra la lista */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea una cuadrícula de 3 columnas */
+    gap: 2rem; /* Añade espacio entre los elementos */
+    max-width: 600px; /* Define un ancho máximo para centrar el contenido */
+}
+
+.aficiones__lista li {
+    display: flex;
+    align-items: center; /* Alinea el texto y la imagen verticalmente */
+     justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    box-shadow: 0 14px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de elevación */
+    background-color: rgb(32, 165, 32);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.aficiones__lista li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white;/* Ajusta el color del texto */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    border-radius: 12px;
+    /* background-color: #8a2be2; */
+    /*gap: 1rem;  Espacio entre el texto y la imagen */
+}
+
+.aficiones__lista li img {
+    width: 50px; /* Tamaño de los iconos */
+    height: auto;
+    margin-top: 0.5rem; /* Espacio entre el texto y el icono */
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Posición original */
+    }
+    50% {
+        transform: translateY(-10px); /* Se eleva un poco */
+    }
+}
+
+.aficiones__imagen {
+    animation: float 3s ease-in-out infinite; /* Aplica la animación de flotación */
+}
+
+/*FORMACION ACADEMICA*/
+.formacion {
+    text-align: center;
+    padding: 1rem;
+}
+
+.formacion__titulo {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.formacion__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centra la lista */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea una cuadrícula de 3 columnas */
+    gap: 2rem; /* Añade espacio entre los elementos */
+    max-width: 800px; /* Define un ancho máximo para centrar el contenido */
+}
+
+.formacion__lista li {
+    box-shadow: 0 14px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(20, 20, 20);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex; /* Activa el flexbox para el contenedor */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.formacion__nombre {
+    color: #fcf8f8;
+
+    align-items: center;
+    border-radius: 70px;
+}
+
+.formacion__detalle {
+    color: rgb(253, 255, 253);
+
+    align-items: center;
+    border-radius: 70px;
+
+}
+
+.formacion__lista li img {
+ width: 60px;
+ height: auto;
+ margin-top: 0.5rem;
+ margin-right: 20px; /* Agrega un margen a la derecha para separar la imagen del texto */
+} 
+
+/* Experiencia profesional*/
+.section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 90px;
+    position: relative;
+    margin-top: 40px;
+}
+
+#experience {
+    /* min-height: 190vh;  */
+    margin-bottom: 100px; 
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    margin: 40px 0;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    animation: fadeIn 1.5s ease-in-out;
+    padding: 4px;
+}
+
+/* Imagen a la izquierda, descripción a la derecha */
+.experience-item .description {
+    width: 45%;
+   
+}
+
+.experience-item .image__expeiencia {
+    width: 95%;
+}
+
+.experience-item .image__expeiencia img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones Repositorio y Ver Demo */
+.buttons {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;
+}
+
+.btn-repo {
+    background-color: #8a2be2;
+    color: white;
+    border: 1px solid #8a2be2;
+}
+
+.btn-demo {
+    background-color: #00bcd4; 
+    color: white;
+    border: 1px solid #00bcd4;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-repo:hover {
+    background-color: white;
+    
+}
+
+.btn-demo:hover {
+    background-color: white;
+    color: #00bcd4;
+}
+
+/*Formulario*/
+.contacto__titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 90px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    margin: 40px 0;
+    padding: 100px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+    animation: fadeIn 1.5s ease-in-out;
+    padding: 4px;
+}
+
+/* Imagen a la izquierda, descripción a la derecha */
+.contacto-item .description {
+    width: 60%;/* Aumenta el ancho de la descripción */
+   
+}
+
+.contacto-item .image__contacto {
+    width: 40%;/* Reduce el ancho de la imagen */
+}
+
+.contacto-item .image__contacto img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imp1 {
+    margin-bottom: 1rem !important;
+}
+
+.form-label {
+    margin-bottom: .5rem;
+}
+
+textarea.form-control {
+    min-height: calc(1.5em + .75rem + calc(var(--bs-border-width)* 2));
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    /* background-color: var(--bs-form-control-bg); */
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+small {
+        display: none;
+}
+
+.was-validate small {
+    display: block;
+    color: red;
+}
+
+/* Aumentar contraste en los enlaces de navegación */
+a {
+    color: black; /* Cambia este color a uno más oscuro para mejorar el contraste */
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #0073e6; /* Asegúrate de que el color hover tenga suficiente contraste */
+}
+  
+/* Mejorar el contraste en los elementos de la lista */
+li {
+    color: black; /* Elige un color más oscuro para el texto de los elementos de la lista */
+}
+  
+/* Botones de demostración */
+a.btn.btn-demo {
+    background-color: #05203b; /* Cambia a un color más oscuro */
+    color: #ffffff; /* Asegúrate de que el texto tenga suficiente contraste con el fondo */
+}
+  
+a.btn.btn-demo:hover {
+    background-color: #005bb5; /* Color hover con suficiente contraste */
+}
+
+/* Footer */
+.footer {
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    background-color: #050505; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    height: 150px; /* Ajusta la altura del footer según lo necesites */
+    text-align: center; /* Asegura que el texto esté centrado */
+    padding: 20px; /* Espacio adicional alrededor del texto */
+}
+
+@media(max-width: 850px){/*cunado sea mayor a 950 se cumplira esto*/
+
+    .header label{
+      display: initial;
+    }
+
+    .header{
+        padding: 20px 10%;
+        
+    }
+
+    .header .navigation{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgb(255, 255, 255, 0.20);
+        display: none;
+    }
+
+    .header .navigation ul li{
+        width: 100%;
+
+    }
+
+    .header .navigation ul li a{
+        padding: 8px 30px 8px 10px;
+        
+    }
+
+    .header .navigation ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header .navigation ul li ul li{
+        background-color: rgb(255, 255, 255, 0.20);
+    }
+
+    .header .navigation ul li ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header .navigation ul li ul li span{
+       padding: 4px 10px ;
+       font-size: 10px;
+    }
+
+    #toggle:checked ~ .navigation{
+        display: block;
+    }
+
+  /* HABILIDADES*/
+    .habilidades {
+        text-align: center; /* Centra el título */
+        padding: 2rem 0;
+    }
+
+    .habilidades__titulo {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    /*FOTO de edgard LEVITANDO*/
+    .presentacion__foto {
+        position: absolute; /* La imagen se posicionará de manera absoluta en relación a .hero */
+        top: 30%; /* Ajusta para centrar verticalmente */
+        left: 5%; /* Ajusta para centrar horizontalmente */
+        transform: translate(-50%, -50%); /* Esto centra la imagen completamente */
+        z-index: 10; /* Asegura que la imagen esté por encima del fondo */
+        width: 10.5rem; /* Tamaño de la imagen, ajusta según lo necesites */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 50%; /* Hace que la imagen sea circular, si lo deseas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra para darle más profundidad */
+        animation: levitate 1s ease-in-out infinite; /* aplica la animación */
+    }
+
+    .habilidades__lista {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto; /* Centra la lista */
+        display: grid; /* Utiliza Grid para organizar las imágenes */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 2rem; /* Espacio entre los elementos */
+        max-width: 500px; /* Define un ancho máximo para la lista */
+    }
+
+    .habilidades__lista li {
+        display: flex;
+        align-items: center; /* Alinea el texto y la imagen verticalmente */
+        justify-content: center; /* Centra el contenido */
+        flex-direction: column; /* Hace que la imagen y texto estén en vertical */
+    }
+
+    .habilidades__lista li a {
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        flex-direction: column; /* Alinea la imagen y el texto en vertical */
+        align-items: center; /* Centra ambos en el eje vertical */
+        gap: 0.5rem; /* Espacio entre el texto y la imagen */
+    }
+
+    .habilidades__lista li img {
+        width: 50px; /* Tamaño de las imágenes */
+        height: auto;  
+    }
+   
+    .formacion__lista {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+
+    .experience-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px; 
+        animation: fadeIn 1.5s ease-in-out;
+        padding: 40px;
+    }
+
+
+    .buttons {
+        margin-top: 20px;
+        font-size: 0.4rem;
+    }
+
+}
+
+
+
+/* TABLES 2 */
+@media(max-width: 650px){
+    .presentacion{
+       display: flex;
+       flex-direction: column;
+    }
+    .redes {
+        display: flex;
+        flex-direction: column;
+        top: 10px;
+        left: 280px;
+        width: 10rem; 
+
+    }
+    .sobre__mi {
+        display: flex;
+        flex-direction: column;
+        max-width: 27.5rem;
+        width: 100%;
+        margin: 0 auto;
+        /* border: 2px solid #25b651; */
+        /* border-radius: 12px; */
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        /* font-size: 12px; */
+    }
+    .sobre__mi__titulo__texto {
+        font-size: 0.8rem;
+    }
+    .aficiones {
+        flex-direction: column; /* Cambia la dirección a columna para filas */
+        align-items: center; /* Alinea los ítems al centro */
+    }
+    .aficiones__item {
+        width: 80%; /* Ajusta el ancho de cada ítem para que se vea bien en filas */
+    }
+    .aficiones__lista {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Una sola columna (de 1fr) por fila */
+        gap: 2rem;
+        max-width: 500px;
+    }
+    .experience-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px; 
+        animation: fadeIn 1.5s ease-in-out;
+        padding: 4px;
+    }
+    
+}
+
+* {
+    /*outline: 1px solid rgb(207, 19, 207);  Agrega un borde rojo a todos los elementos para identificar el desbordamiento */
+}
+
+
+/*CONFIGURACION PARA CELULARES*/
+@media(max-width: 450px){
+    .presentacion {
+        display: flex; /*no es necesario solo contiene textospermite centrar los elementos   dentro del contenedor de manera sencilla.*/
+        flex-direction: column;
+        align-items: center; /* Centra verticalmente */
+        text-align: center; /* Alinea el texto dentro de los elementos hijos */
+        min-height: 30vh;  /*Asegura que ocupe toda la pantalla */
+        padding: 30px; /* Añade algo de padding para evitar que el contenido toque los bordes */
+    }
+    
+    .presentacion__titulo{
+        font-size: 16px;
+    }
+    /*foto del muñeco*/
+    .presentacion__fotoed {
+        width: 7rem; /* Ajusta el tamaño de la imagen */
+        height: auto; /* Mantén la proporción de la imagen */
+        border-radius: 50%; /* Opcional: hace la imagen circular */
+        margin-left: 1.5rem; /* Añade espacio entre la imagen y el texto */
+        /* Puedes añadir más estilos si quieres un efecto visual */
+        padding: 5px;
+    }
+
+    .redes {
+            display: flex;
+            flex-direction: column;
+            top: 10px;
+            left: 230px;
+    }
+
+    .experience-item .description {
+        width: 80%;
+    }
+
+    /*SOBRE MI*/
+    .sobre__mi {
+        display: flex; /*no es necesario solo contiene textospermite centrar los elementos   dentro del contenedor de manera sencilla.*/
+        flex-direction: column;
+        align-items: center; /* Centra verticalmente */
+        text-align: center; /* Alinea el texto dentro de los elementos hijos */
+        min-height: 30vh;  /*Asegura que ocupe toda la pantalla */
+        padding: 30px; /* Añade algo de padding para evitar que el contenido toque los bordes */
+    }
+
+    /*FOTO DEL AUTOR DEL BLOG*/
+    .presentacion__fotoed{
+        display: none;
+    }
+
+    /*imagen de fondo*/
+    .hero {
+    min-height: 80vh;
+    }
+
+    .habilidades__lista {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto; /* Centra la lista */
+        display: grid; /* Utiliza Grid para organizar las imágenes */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 2rem; /* Espacio entre los elementos */
+        max-width: 600px; /* Define un ancho máximo para la lista */
+    }
+
+    /*FOTO de edgard LEVITANDO*/
+    .presentacion__foto {
+        position: absolute; /* La imagen se posicionará de manera absoluta en relación a .hero */
+        top: 30%; /* Ajusta para centrar verticalmente */
+        left: 5%; /* Ajusta para centrar horizontalmente */
+        transform: translate(-50%, -50%); /* Esto centra la imagen completamente */
+        z-index: 10; /* Asegura que la imagen esté por encima del fondo */
+        width: 7.5rem; /* Tamaño de la imagen, ajusta según lo necesites */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 50%; /* Hace que la imagen sea circular, si lo deseas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra para darle más profundidad */
+        animation: levitate 1s ease-in-out infinite; /* aplica la animación */
+    }
+    
+    /*Aficione*/
+    .aficiones {
+        flex-direction: column; /* Cambia la dirección a columna para filas */
+        align-items: center; /* Alinea los ítems al centro */
+    }
+
+    .aficiones__item {
+        width: 80%; /* Ajusta el ancho de cada ítem para que se vea bien en filas */
+    }
+
+    .aficiones__lista {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Una sola columna (de 1fr) por fila */
+        gap: 2rem;
+        max-width: 600px;
+    }
+
+    .contacto-item .image__contacto{
+        display: none;
+    }
+    
+    .contacto-item .description {
+        width: 100%;
+    }
+}
+
+
+
+
+
+  
