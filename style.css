@@ -800,7 +800,7 @@ a.btn.btn-demo:hover {
 
     .habilidades__lista li a {
         text-decoration: none;
-        color: #333;
+        /* color: #333; */
         display: flex;
         flex-direction: column; /* Alinea la imagen y el texto en vertical */
         align-items: center; /* Centra ambos en el eje vertical */
