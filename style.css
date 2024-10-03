@@ -402,7 +402,7 @@ a:hover {
 .aficiones__lista li {
     display: flex;
     align-items: center; /* Alinea el texto y la imagen verticalmente */
-     justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: space-around;
     box-shadow: 0 14px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto de elevación */
     background-color: rgb(32, 165, 32);
     border-radius: 12px;
@@ -815,7 +815,7 @@ a.btn.btn-demo:hover {
     .formacion__lista {
         display: flex;
         flex-direction: column;
-        width: 70%;
+        /* width: 70%; */
     }
 
 
@@ -894,7 +894,7 @@ a.btn.btn-demo:hover {
 }
 
 * {
-    /*outline: 1px solid rgb(207, 19, 207);  Agrega un borde rojo a todos los elementos para identificar el desbordamiento */
+    /* outline: 1px solid red; Agrega un borde rojo a todos los elementos para identificar el desbordamiento */
 }
 
 
@@ -926,12 +926,15 @@ a.btn.btn-demo:hover {
             display: flex;
             flex-direction: column;
             top: 10px;
-            left: 230px;
+            left: 180px;
     }
 
     .experience-item .description {
         width: 80%;
     }
+
+ 
+  
 
     /*SOBRE MI*/
     .sobre__mi {
@@ -994,6 +997,25 @@ a.btn.btn-demo:hover {
         max-width: 600px;
     }
 
+    /*Habilidades*/
+    .habilidades__lista {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 800px;
+    }
+
+    /*Formacion*/
+    .formacion__nombre {
+        color: #fcf8f8;
+        align-items: center;
+        border-radius: 70px;
+        font-size: 1rem;
+    }
+
     .contacto-item .image__contacto{
         display: none;
     }
@@ -1001,9 +1023,20 @@ a.btn.btn-demo:hover {
     .contacto-item .description {
         width: 100%;
     }
+
+    .contacto-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin: 40px 0;
+        padding: 30px;
+    }
 }
 
+.imagen_gimnasio {
+    height: 150px;
 
+}
 
 
 
