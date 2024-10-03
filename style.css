@@ -849,7 +849,7 @@ a.btn.btn-demo:hover {
         flex-direction: column;
         top: 10px;
         left: 280px;
-        width: 10rem; 
+        width: 7rem; 
 
     }
     .sobre__mi {
@@ -956,15 +956,7 @@ a.btn.btn-demo:hover {
     min-height: 80vh;
     }
 
-    .habilidades__lista {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto; /* Centra la lista */
-        display: grid; /* Utiliza Grid para organizar las imágenes */
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        gap: 2rem; /* Espacio entre los elementos */
-        max-width: 600px; /* Define un ancho máximo para la lista */
-    }
+ 
 
     /*FOTO de edgard LEVITANDO*/
     .presentacion__foto {
@@ -1000,7 +992,7 @@ a.btn.btn-demo:hover {
     /*Habilidades*/
     .habilidades__lista {
         list-style: none;
-        padding: 0;
+        padding: 20px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
